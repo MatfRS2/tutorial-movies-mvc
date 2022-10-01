@@ -1,0 +1,18 @@
+﻿@*
+    Koristna linkl https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Naslov"] = "Lista filmova";
+}
+
+<h2>Moja lista filmova</h2>
+
+<ul>
+    @for (int i = 0; i < (int)ViewData["BrojPojava"]!; i++)
+    {
+        <li>@ViewData["Poruka"]</li>
+    }
+</ul>
+
+<p>Pozdrav svetu iz našeg šablona za pogled!</p>
+

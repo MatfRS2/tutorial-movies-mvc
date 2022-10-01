@@ -12,6 +12,14 @@ namespace MvcMovie.Controllers
             return View();
         }
 
+        public IActionResult Pozdrav(string ime, int brojPojava = 1)
+        {
+            ViewData["Poruka"] = "Zdravo " + ime;
+            ViewData["BrojPojava"] = brojPojava;
+
+            return View();
+        }
+
         // 
         // GET: /ZdravoSvete/DobroDosli/ 
         public string Dobrodosli()
