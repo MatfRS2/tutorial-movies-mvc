@@ -7,9 +7,9 @@ namespace MvcMovie.Controllers
     {
         // 
         // GET: /ZdravoSvete/
-        public string Index()
+        public IActionResult Index()
         {
-            return "Ovo je metod za podrazumevanu akciju...";
+            return View();
         }
 
         // 
