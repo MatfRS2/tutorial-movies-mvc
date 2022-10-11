@@ -40,7 +40,7 @@ namespace MvcMovie.Controllers
         // Requires using System.Text.Encodings.Web;
         public string Dobrodosli3(string ime, int ID = 1)
         {
-            return HtmlEncoder.Default.Encode($"Dobrodosli {ime}, broj pokusaja je: {ID}");
+            return HtmlEncoder.Default.Encode($"Dobrodosli {ime}, id je: {ID}");
         }
     }
 }
