@@ -1,10 +1,10 @@
 ﻿@model MvcMovies.Models.Film
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalji";
 }
 
-<h1>Details</h1>
+<h1>Detalji</h1>
 
 <div>
     <h4>Film</h4>
@@ -17,19 +17,19 @@
             @Html.DisplayFor(model => model.Naslov)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DatumPocetkaPrikazivanja)
+            Početak prikazivanja
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DatumPocetkaPrikazivanja)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Zanr)
+            Žanr
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Zanr)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ulozeno)
+            Uloženo
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Ulozeno)
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Izmeni</a> |
+    <a asp-action="Index">Povratak na spisak filmova</a>
 </div>

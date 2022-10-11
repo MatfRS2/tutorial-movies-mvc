@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Filmovi</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Kreiraj</a>
 </p>
 <table class="table">
     <thead>
@@ -16,13 +16,13 @@
                 @Html.DisplayNameFor(model => model.Naslov)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DatumPocetkaPrikazivanja)
+                Početak prikazivanja
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Zanr)
+                Žanr
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Ulozeno)
+                Uloženo
             </th>
             <th></th>
         </tr>
@@ -43,9 +43,9 @@
                 @Html.DisplayFor(modelItem => item.Ulozeno)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Izmeni</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalji</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Obriši</a>
             </td>
         </tr>
 }
