@@ -7,9 +7,17 @@ namespace MvcMovie.Controllers
     {
         // 
         // GET: /ZdravoSvete/
-        public string Index()
+        public IActionResult Index()
         {
-            return "Ovo je metod za podrazumevanu akciju...";
+            return View();
+        }
+
+        public IActionResult Pozdrav(string ime, int brojPojava = 1)
+        {
+            ViewData["Poruka"] = "Zdravo " + ime;
+            ViewData["BrojPojava"] = brojPojava;
+
+            return View();
         }
 
         // 
@@ -24,8 +32,15 @@ namespace MvcMovie.Controllers
         // Requires using System.Text.Encodings.Web;
         public string Dobrodosli2(string ime, int brojPokusaja = 1)
         {
-            return HtmlEncoder.Default.Encode($"Hello {ime}, broj pokusaja je: {brojPokusaja}");
+            return HtmlEncoder.Default.Encode($"Doborodosli, {ime}, broj pokusaja je: {brojPokusaja}");
         }
 
+        // 
+        // GET: /ZdravoSvete/DobroDosli3/ 
+        // Requires using System.Text.Encodings.Web;
+        public string Dobrodosli3(string ime, int ID = 1)
+        {
+            return HtmlEncoder.Default.Encode($"Dobrodosli {ime}, broj pokusaja je: {ID}");
+        }
     }
 }
